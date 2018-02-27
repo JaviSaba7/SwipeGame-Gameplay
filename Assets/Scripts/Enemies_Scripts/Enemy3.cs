@@ -25,11 +25,11 @@ public class Enemy3 : MonoBehaviour
         if (startEnemy == true)
         {
             counterToRun++;
-            if (counterToRun >= 4)
+            if (counterToRun >= 20 && counterToRun <= 23)
             {
                 actions.SetBool("Run", true);
                 alien3_mesh.GetComponent<Animator>().enabled = true;
-                startEnemy = false;
+
             }
         }
 
@@ -43,3 +43,4 @@ public class Enemy3 : MonoBehaviour
 
 
 }
+
