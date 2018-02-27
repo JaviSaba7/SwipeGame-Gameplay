@@ -13,6 +13,7 @@ public class EnemyManagement : MonoBehaviour {
     public Enemy6 enemy6;
     public Enemy7 enemy7;
     public Enemy8 enemy8;
+ 
     public Enemy9 enemy9;
     public Enemy10 enemy10;
 
@@ -87,7 +88,7 @@ public class EnemyManagement : MonoBehaviour {
         if (gameSystem.timeofGame <= 35)
         {
             enemy9.startEnemy = true;
-            enemy9.alien7_mesh.SetActive(true);
+            enemy9.alien9_mesh.SetActive(true);
 
         }
         else
@@ -100,7 +101,7 @@ public class EnemyManagement : MonoBehaviour {
         if (gameSystem.timeofGame <= 30)
         {
             enemy10.startEnemy = true;
-            enemy10.alien7_mesh.SetActive(true);
+            enemy10.alien10_mesh.SetActive(true);
 
         }
         else
