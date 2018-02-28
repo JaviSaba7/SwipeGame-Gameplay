@@ -5,14 +5,16 @@ using UnityEngine;
 public class Enemy1 : MonoBehaviour {
 
     public GameObject alien1_mesh;
+    public GameObject disable;
+
     public bool startEnemy;
     public float counterToRun;
     public bool counterToShotBool = false;
     public float counterToShot;
     public Animator animator_alien;
     public Animator actions;
-    public GameObject particles;
-
+    public bool deadEnemy = false;
+    public GameObject explosion;
     // Use this for initialization
     void Start ()
     {
@@ -39,20 +41,24 @@ public class Enemy1 : MonoBehaviour {
             if(counterToShot > 4) actions.SetBool("Reload", true);
         }
 
+        if(deadEnemy)
+        {
+            Debug.Log("HELLO");
+            explosion.SetActive(true);
+            disable.SetActive(false);
+        }
        
     }
-        void OnTriggerEnter(Collider other)
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "KillBomb")
         {
-            if (gameObject.tag == "KillBomb")
-            {
-                Debug.Log("COLLISION!!!!!");
-                particles.SetActive(true);
-
-            }
-
-
-
+            deadEnemy = true;
         }
+    }
+
 
 
 }

@@ -21,7 +21,6 @@ public class EnemyManagement : MonoBehaviour {
     public Enemy14 enemy14;
     public Enemy15 enemy15;
     public Alien alien;
-
     // Use this for initialization
     void Start ()
     {
@@ -32,7 +31,7 @@ public class EnemyManagement : MonoBehaviour {
     void Update ()
     {
         //FirstEnemy
-        if (gameSystem.timeofGame <= 59)
+        if (gameSystem.timeofGame <= 59 && enemy1.deadEnemy == false)
         {
             enemy1.startEnemy = true;
             enemy1.alien1_mesh.SetActive(true);
