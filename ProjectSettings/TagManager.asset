@@ -17,6 +17,15 @@ TagManager:
   - Enemy_6
   - Enemy_7
   - Enemy_8
+  - Enemy_9
+  - Enemy_10
+  - Enemy_11
+  - Enemy_12
+  - Enemy_13
+  - Enemy_14
+  - Enemy_15
+  - ALIEN
+  - KillBomb
   layers:
   - Default
   - TransparentFX

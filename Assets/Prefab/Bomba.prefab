@@ -59,9 +59,10 @@ GameObject:
   - component: {fileID: 114401359779510280}
   - component: {fileID: 135739019896626564}
   - component: {fileID: 54029852045126428}
+  - component: {fileID: 143453282672386996}
   m_Layer: 0
   m_Name: Bomba
-  m_TagString: Ball
+  m_TagString: KillBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +274,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.42
   m_Center: {x: -0.000000014365837, y: 0, z: 0.03}
+--- !u!143 &143453282672386996
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968657714333714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.44000018
+  m_Radius: 0.46101883
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198123586438569476
 ParticleSystem:
   m_ObjectHideFlags: 1

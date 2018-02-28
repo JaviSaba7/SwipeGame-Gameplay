@@ -13,9 +13,14 @@ public class EnemyManagement : MonoBehaviour {
     public Enemy6 enemy6;
     public Enemy7 enemy7;
     public Enemy8 enemy8;
- 
     public Enemy9 enemy9;
     public Enemy10 enemy10;
+    public Enemy11 enemy11;
+    public Enemy12 enemy12;
+    public Enemy13 enemy13;
+    public Enemy14 enemy14;
+    public Enemy15 enemy15;
+    public Alien alien;
 
     // Use this for initialization
     void Start ()
@@ -34,7 +39,7 @@ public class EnemyManagement : MonoBehaviour {
         }
         else enemy1.startEnemy = false;
 
-        
+        /*
         //SecondEnemy
         if (gameSystem.timeofGame <= 54)
         {
@@ -97,7 +102,7 @@ public class EnemyManagement : MonoBehaviour {
 
         }
 
-        //9 Enemy
+        //10 Enemy
         if (gameSystem.timeofGame <= 30)
         {
             enemy10.startEnemy = true;
@@ -109,6 +114,78 @@ public class EnemyManagement : MonoBehaviour {
             enemy10.startEnemy = false;
 
         }
+
+        //11 Enemy
+        if (gameSystem.timeofGame <= 25)
+        {
+            enemy11.startEnemy = true;
+            enemy11.alien11_mesh.SetActive(true);
+
+        }
+        else
+        {
+            enemy11.startEnemy = false;
+        }
+
+        //12 Enemy
+        if (gameSystem.timeofGame <= 25)
+        {
+            enemy12.startEnemy = true;
+            enemy12.alien12_mesh.SetActive(true);
+
+        }
+        else
+        {
+            enemy12.startEnemy = false;
+        }
+
+        //13 Enemy
+        if (gameSystem.timeofGame <= 15)
+        {
+            enemy13.startEnemy = true;
+            enemy13.alien13_mesh.SetActive(true);
+
+        }
+        else
+        {
+            enemy13.startEnemy = false;
+        }
+        //14 Enemy
+        if (gameSystem.timeofGame <= 15)
+        {
+            enemy14.startEnemy = true;
+            enemy14.alien14_mesh.SetActive(true);
+
+        }
+        else
+        {
+            enemy14.startEnemy = false;
+        }
+
+        //15 Enemy
+        if (gameSystem.timeofGame <= 15)
+        {
+            enemy15.startEnemy = true;
+            enemy15.alien15_mesh.SetActive(true);
+
+        }
+        else
+        {
+            enemy15.startEnemy = false;
+        }
+        
+        //ALIEN
+        if (gameSystem.timeofGame <= 58)
+        {
+            alien.startEnemy = true;
+            alien.alien.SetActive(true);
+
+        }
+        else
+        {
+            alien.startEnemy = false;
+        }*/
+
 
     }
 

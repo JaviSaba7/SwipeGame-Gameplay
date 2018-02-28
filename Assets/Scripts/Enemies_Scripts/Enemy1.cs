@@ -11,6 +11,7 @@ public class Enemy1 : MonoBehaviour {
     public float counterToShot;
     public Animator animator_alien;
     public Animator actions;
+    public GameObject particles;
 
     // Use this for initialization
     void Start ()
@@ -37,8 +38,21 @@ public class Enemy1 : MonoBehaviour {
             counterToShot++;
             if(counterToShot > 4) actions.SetBool("Reload", true);
         }
-    }
 
+       
+    }
+        void OnTriggerEnter(Collider other)
+        {
+            if (gameObject.tag == "KillBomb")
+            {
+                Debug.Log("COLLISION!!!!!");
+                particles.SetActive(true);
+
+            }
+
+
+
+        }
 
 
 }

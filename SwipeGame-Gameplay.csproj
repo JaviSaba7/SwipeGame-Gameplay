@@ -307,8 +307,14 @@
     <Compile Include="Assets\Scripts\CollisionBall.cs" />
     <Compile Include="Assets\Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\Scripts\DrawPath.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Alien.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy1.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy10.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy11.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy12.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy13.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy14.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy15.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy2.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy3.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy4.cs" />

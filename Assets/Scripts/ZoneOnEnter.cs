@@ -15,6 +15,14 @@ public class ZoneOnEnter : MonoBehaviour
     public Enemy6 enemy6;
     public Enemy7 enemy7;
     public Enemy8 enemy8;
+    public Enemy9 enemy9;
+    public Enemy10 enemy10;
+    public Enemy11 enemy11;
+    public Enemy12 enemy12;
+    public Enemy13 enemy13;
+    public Enemy14 enemy14;
+    public Enemy15 enemy15;
+    public Alien alien;
     //Update
     void Update()
     {
@@ -86,6 +94,63 @@ public class ZoneOnEnter : MonoBehaviour
             enemy8.counterToShotBool = true;
 
         }
+        if (other.tag == "Enemy_9")
+        {
+            enemy9.GetComponent<Animator>().enabled = false;
+            enemy9.actions.SetBool("IdleWhenArrives", true);
+            enemy9.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_10")
+        {
+            enemy10.GetComponent<Animator>().enabled = false;
+            enemy10.actions.SetBool("IdleWhenArrives", true);
+            enemy10.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_11")
+        {
+            enemy11.GetComponent<Animator>().enabled = false;
+            enemy11.actions.SetBool("IdleWhenArrives", true);
+            enemy11.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_12")
+        {
+            enemy12.GetComponent<Animator>().enabled = false;
+            enemy12.actions.SetBool("IdleWhenArrives", true);
+            enemy12.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_13")
+        {
+            enemy13.GetComponent<Animator>().enabled = false;
+            enemy13.actions.SetBool("IdleWhenArrives", true);
+            enemy13.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_14")
+        {
+            enemy14.GetComponent<Animator>().enabled = false;
+            enemy14.actions.SetBool("IdleWhenArrives", true);
+            enemy14.counterToShotBool = true;
+
+        }
+        if (other.tag == "Enemy_15")
+        {
+            enemy15.GetComponent<Animator>().enabled = false;
+            enemy15.actions.SetBool("IdleWhenArrives", true);
+            enemy15.counterToShotBool = true;
+
+        }
+        if (other.tag == "ALIEN")
+        {
+            alien.GetComponent<Animator>().enabled = false;
+            //alien.actions.SetBool("IdleWhenArrives", true);
+            //alien.counterToShotBool = true;
+
+        }
+
     }
 }
 
