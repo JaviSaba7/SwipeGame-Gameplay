@@ -13,6 +13,8 @@ public class Enemy5 : MonoBehaviour
     public Animator animator_alien;
     public Animator actions;
 
+    public bool deadEnemy = false;
+    public GameObject explosion;
     // Use this for initialization
     void Start()
     {
@@ -37,6 +39,20 @@ public class Enemy5 : MonoBehaviour
         {
             counterToShot++;
             if (counterToShot > 4) actions.SetBool("Reload", true);
+        }
+        if (deadEnemy)
+        {
+            Debug.Log("HELLO");
+            explosion.SetActive(true);
+            explosion.transform.position = alien5_mesh.transform.position;
+            alien5_mesh.SetActive(false);
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "KillBomb")
+        {
+            deadEnemy = true;
         }
     }
 

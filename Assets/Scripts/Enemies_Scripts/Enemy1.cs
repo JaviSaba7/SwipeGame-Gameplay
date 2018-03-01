@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy1 : MonoBehaviour {
 
     public GameObject alien1_mesh;
-    public GameObject disable;
+
 
     public bool startEnemy;
     public float counterToRun;
@@ -45,7 +45,8 @@ public class Enemy1 : MonoBehaviour {
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
-            disable.SetActive(false);
+            explosion.transform.position = alien1_mesh.transform.position;
+            alien1_mesh.SetActive(false);
         }
        
     }

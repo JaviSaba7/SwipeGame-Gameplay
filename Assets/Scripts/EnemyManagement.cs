@@ -38,9 +38,9 @@ public class EnemyManagement : MonoBehaviour {
         }
         else enemy1.startEnemy = false;
 
-        /*
+        
         //SecondEnemy
-        if (gameSystem.timeofGame <= 54)
+        if (gameSystem.timeofGame <= 54 && enemy2.deadEnemy == false)
         {
             enemy2.startEnemy = true;
             enemy2.alien2_mesh.SetActive(true);
@@ -49,7 +49,7 @@ public class EnemyManagement : MonoBehaviour {
         else enemy2.startEnemy = false;
 
         //ThirdEnemy
-        if (gameSystem.timeofGame <= 54)
+        if (gameSystem.timeofGame <= 54 && enemy3.deadEnemy == false)
         {
             enemy3.startEnemy = true;
             enemy3.alien3_mesh.SetActive(true);
@@ -58,7 +58,7 @@ public class EnemyManagement : MonoBehaviour {
         else enemy3.startEnemy = false;
 
         //4-5-6 Enemy
-        if (gameSystem.timeofGame <= 50)
+        if (gameSystem.timeofGame <= 50 && (enemy4.deadEnemy == false) && (enemy5.deadEnemy == false) && (enemy6.deadEnemy == false))
         {
             enemy4.startEnemy = true;
             enemy4.alien4_mesh.SetActive(true);
@@ -75,7 +75,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //7-8 Enemy
-        if (gameSystem.timeofGame <= 40)
+        if (gameSystem.timeofGame <= 40 && (enemy7.deadEnemy == false) && (enemy8.deadEnemy == false))
         {
             enemy7.startEnemy = true;
             enemy7.alien7_mesh.SetActive(true);
@@ -89,7 +89,7 @@ public class EnemyManagement : MonoBehaviour {
         }
         
         //9 Enemy
-        if (gameSystem.timeofGame <= 35)
+        if (gameSystem.timeofGame <= 35 && (enemy9.deadEnemy == false))
         {
             enemy9.startEnemy = true;
             enemy9.alien9_mesh.SetActive(true);
@@ -102,7 +102,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //10 Enemy
-        if (gameSystem.timeofGame <= 30)
+        if (gameSystem.timeofGame <= 30 && (enemy10.deadEnemy == false))
         {
             enemy10.startEnemy = true;
             enemy10.alien10_mesh.SetActive(true);
@@ -115,7 +115,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //11 Enemy
-        if (gameSystem.timeofGame <= 25)
+        if (gameSystem.timeofGame <= 25 && (enemy11.deadEnemy == false))
         {
             enemy11.startEnemy = true;
             enemy11.alien11_mesh.SetActive(true);
@@ -127,7 +127,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //12 Enemy
-        if (gameSystem.timeofGame <= 25)
+        if (gameSystem.timeofGame <= 25 && (enemy12.deadEnemy == false))
         {
             enemy12.startEnemy = true;
             enemy12.alien12_mesh.SetActive(true);
@@ -139,7 +139,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //13 Enemy
-        if (gameSystem.timeofGame <= 15)
+        if (gameSystem.timeofGame <= 15 && (enemy13.deadEnemy == false))
         {
             enemy13.startEnemy = true;
             enemy13.alien13_mesh.SetActive(true);
@@ -150,7 +150,7 @@ public class EnemyManagement : MonoBehaviour {
             enemy13.startEnemy = false;
         }
         //14 Enemy
-        if (gameSystem.timeofGame <= 15)
+        if (gameSystem.timeofGame <= 15 && (enemy14.deadEnemy == false))
         {
             enemy14.startEnemy = true;
             enemy14.alien14_mesh.SetActive(true);
@@ -162,7 +162,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //15 Enemy
-        if (gameSystem.timeofGame <= 15)
+        if (gameSystem.timeofGame <= 15 && (enemy15.deadEnemy == false))
         {
             enemy15.startEnemy = true;
             enemy15.alien15_mesh.SetActive(true);
@@ -174,7 +174,7 @@ public class EnemyManagement : MonoBehaviour {
         }
         
         //ALIEN
-        if (gameSystem.timeofGame <= 58)
+        if (gameSystem.timeofGame <= 10)
         {
             alien.startEnemy = true;
             alien.alien.SetActive(true);
@@ -183,7 +183,7 @@ public class EnemyManagement : MonoBehaviour {
         else
         {
             alien.startEnemy = false;
-        }*/
+        }
 
 
     }
