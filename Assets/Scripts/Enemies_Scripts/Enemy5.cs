@@ -27,7 +27,7 @@ public class Enemy5 : MonoBehaviour
         if (startEnemy == true)
         {
             counterToRun++;
-            if (counterToRun >= 20 && counterToRun <= 23)
+            if (counterToRun >= 40 && counterToRun <= 43)
             {
                 actions.SetBool("Run", true);
                 alien5_mesh.GetComponent<Animator>().enabled = true;
@@ -38,7 +38,8 @@ public class Enemy5 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 4) actions.SetBool("Reload", true);
+            if (counterToShot > 10 && counterToShot < 12) actions.SetBool("Reload", true);
+            if (counterToShot > 12) actions.SetBool("Reload", false);
         }
         if (deadEnemy)
         {

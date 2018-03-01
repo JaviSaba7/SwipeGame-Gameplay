@@ -330,6 +330,7 @@
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\RestartBall.cs" />
+    <Compile Include="Assets\Scripts\Start.cs" />
     <Compile Include="Assets\Scripts\SwipeBall1.cs" />
     <Compile Include="Assets\Scripts\WinSystem.cs" />
     <Compile Include="Assets\Scripts\ZoneOnEnter.cs" />

@@ -37,7 +37,8 @@ public class Enemy10 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 4) actions.SetBool("Reload", true);
+            if (counterToShot > 10 && counterToShot < 12) actions.SetBool("Reload", true);
+            if (counterToShot > 12) actions.SetBool("Reload", false);
         }
         if(deadEnemy)
         {

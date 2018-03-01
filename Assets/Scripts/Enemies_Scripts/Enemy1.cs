@@ -27,7 +27,7 @@ public class Enemy1 : MonoBehaviour {
 		if(startEnemy == true)
         {
             counterToRun++;
-            if(counterToRun >= 20 && counterToRun <= 23)
+            if(counterToRun >= 40 && counterToRun <= 43)
             {
                 actions.SetBool("Run", true);
                 alien1_mesh.GetComponent<Animator>().enabled = true;
@@ -38,14 +38,19 @@ public class Enemy1 : MonoBehaviour {
         if(counterToShotBool)
         {
             counterToShot++;
-            if(counterToShot > 4) actions.SetBool("Reload", true);
+            if(counterToShot > 10 && counterToShot < 12) actions.SetBool("Reload", true);
+            if (counterToShot > 12) actions.SetBool("Reload", false);
+
         }
 
-        if(deadEnemy)
+        if (deadEnemy)
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
-            explosion.transform.position = alien1_mesh.transform.position;
+            explosion.transform.position = alien1_mesh.gameObject.transform.position;
+            //explosion.transform.position.x = 0;
+            //explosion.transform.position = 0.093;
+            //explosion.gameObject.transform.position = ()
             alien1_mesh.SetActive(false);
         }
        

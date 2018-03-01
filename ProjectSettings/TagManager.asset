@@ -26,6 +26,7 @@ TagManager:
   - Enemy_15
   - ALIEN
   - KillBomb
+  - ALIEN_ALIEN
   layers:
   - Default
   - TransparentFX

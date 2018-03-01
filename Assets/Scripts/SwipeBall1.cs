@@ -254,7 +254,7 @@ public class SwipeBall1 : MonoBehaviour
 
     public void CalculateWaypoints()
     {
-        posX = (PosMaxX.x + PosMaxY.x)/ 2;
+       posX = (PosMaxX.x + PosMaxY.x)/ 2;
         posY = ((PosMaxX.y + PosMaxY.y)/2);
 
         saveTime = ((saveTime2 - saveTime) /2) + saveTime;
@@ -264,10 +264,10 @@ public class SwipeBall1 : MonoBehaviour
         
         midPosition = new Vector3(posX* (factorX/posZ), (factorY) * posY, posZ);
         
-        waypointsArray = new Vector3[3];
+        waypointsArray = new Vector3[2];
         waypointsArray[0] = iPosition;
-        waypointsArray[1] = midPosition;
-        waypointsArray[2] = fPosition;
+        //waypointsArray[1] = midPosition;
+        waypointsArray[1] = fPosition;
     }
     private void Kick(Vector3 lastPosition)
     {    
@@ -295,7 +295,7 @@ public class SwipeBall1 : MonoBehaviour
             saveTime = timer;
         }*/
       
-        if (Mathf.Abs(Input.mousePosition.y / Screen.height) > Mathf.Abs(PosMaxY.y))
+       if (Mathf.Abs(Input.mousePosition.y / Screen.height) > Mathf.Abs(PosMaxY.y))
         {
             PosMaxY.y = Input.mousePosition.y / Screen.height;
             //PosMaxY.x = difToCenter;

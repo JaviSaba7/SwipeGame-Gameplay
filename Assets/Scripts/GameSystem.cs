@@ -9,8 +9,6 @@ public class GameSystem : MonoBehaviour {
     
     public float timeToStart = 3.0f;
     public float timeofGame = 60.0f;
-    public float score;
-    public Text scoreText;
     public Text counterToStartText;
     public Text gameTimeText;
     public bool startGame;
@@ -22,7 +20,6 @@ public class GameSystem : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        score = 0;
         startGame = true;
     }
 
@@ -70,7 +67,6 @@ public class GameSystem : MonoBehaviour {
 
         }
 
-        scoreText.text = score.ToString("");
 
     }
 }
