@@ -5,8 +5,7 @@ using System;
 using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour {
-
-    
+  
     public float timeToStart = 3.0f;
     public float timeofGame = 60.0f;
     public Text counterToStartText;
@@ -31,7 +30,6 @@ public class GameSystem : MonoBehaviour {
         if (counter > 60)
         {
             Debug.Log("TIME PASADO");
-
             counter = 0;
             turnOff = false;
         }

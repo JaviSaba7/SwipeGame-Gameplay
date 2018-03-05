@@ -305,6 +305,7 @@
     <Compile Include="Assets\FullTiltBoogie\RotateFlareHolder.cs" />
     <Compile Include="Assets\Scripts\AnimationManager.cs" />
     <Compile Include="Assets\Scripts\CollisionBall.cs" />
+    <Compile Include="Assets\Scripts\DeadManager.cs" />
     <Compile Include="Assets\Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\Scripts\DrawPath.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Alien.cs" />

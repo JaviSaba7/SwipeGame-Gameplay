@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Enemy12 : MonoBehaviour
 {
+    public GameObject anim_alien1;
+    public bool timeOfShot;
+    public DeadManager DieManager;
 
+    public float timeOfDie;
     public GameObject alien12_mesh;
     public bool startEnemy;
     public float counterToRun;
@@ -30,7 +34,7 @@ public class Enemy12 : MonoBehaviour
             if (counterToRun >= 20 && counterToRun <= 23)
             {
                 actions.SetBool("Run", true);
-                alien12_mesh.GetComponent<Animator>().enabled = true;
+                anim_alien1.GetComponent<Animator>().enabled = true;
 
             }
         }
@@ -38,7 +42,12 @@ public class Enemy12 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 10 && counterToShot < 12) actions.SetBool("Reload", true);
+            if (counterToShot > 10 && counterToShot < 12)
+            {
+                actions.SetBool("Reload", true);
+                timeOfShot = true;
+
+            }
             if (counterToShot > 12) actions.SetBool("Reload", false);
         }
         if (deadEnemy)
@@ -47,6 +56,15 @@ public class Enemy12 : MonoBehaviour
             explosion.SetActive(true);
             explosion.transform.position = alien12_mesh.transform.position;
             alien12_mesh.SetActive(false);
+        }
+
+        if (timeOfShot)
+        {
+            timeOfDie++;
+            if (timeOfDie > 20)
+            {
+                DieManager.dead = true;
+            }
         }
 
     }

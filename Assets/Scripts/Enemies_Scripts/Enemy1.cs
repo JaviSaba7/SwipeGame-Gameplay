@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy1 : MonoBehaviour {
 
+    public float timeOfDie;
     public GameObject alien1_mesh;
-
-
+    public GameObject anim_alien1;
+    public bool timeOfShot;
     public bool startEnemy;
     public float counterToRun;
     public bool counterToShotBool = false;
@@ -15,6 +16,8 @@ public class Enemy1 : MonoBehaviour {
     public Animator actions;
     public bool deadEnemy = false;
     public GameObject explosion;
+    public DeadManager DieManager;
+    public GameObject particlesShot;
     // Use this for initialization
     void Start ()
     {
@@ -30,32 +33,44 @@ public class Enemy1 : MonoBehaviour {
             if(counterToRun >= 40 && counterToRun <= 43)
             {
                 actions.SetBool("Run", true);
-                alien1_mesh.GetComponent<Animator>().enabled = true;
-                
+                anim_alien1.GetComponent<Animator>().enabled = true;               
             }
         }
 
         if(counterToShotBool)
         {
             counterToShot++;
-            if(counterToShot > 10 && counterToShot < 12) actions.SetBool("Reload", true);
+            if (counterToShot > 10 && counterToShot < 12)
+            {
+                actions.SetBool("Reload", true);
+                timeOfShot = true;
+
+            }
             if (counterToShot > 12) actions.SetBool("Reload", false);
 
+        }
+
+        if(timeOfShot)
+        {
+            timeOfDie++;
+            if(timeOfDie > 20)
+            {
+                DieManager.dead = true;
+            }
+            if (timeOfDie > 17)
+            {
+                //  particlesShot.SetActive(true);
+            }
         }
 
         if (deadEnemy)
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
-            explosion.transform.position = alien1_mesh.gameObject.transform.position;
-            //explosion.transform.position.x = 0;
-            //explosion.transform.position = 0.093;
-            //explosion.gameObject.transform.position = ()
+            //explosion.transform.localPosition = alien1_mesh.gameObject.transform.localPosition;
             alien1_mesh.SetActive(false);
-        }
-       
+        }  
     }
-
 
     void OnTriggerEnter(Collider other)
     {

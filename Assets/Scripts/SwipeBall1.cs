@@ -78,7 +78,7 @@ public class SwipeBall1 : MonoBehaviour
     public bool appearBall2Bool = false;
     public bool startGame = false;
     public RestartBall restartSystem;
-    public AnimationManager anim;
+    public GameObject anim;
     public bool ballThrown = false;
     public GameObject winText;
     //Start

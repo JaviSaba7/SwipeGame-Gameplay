@@ -8,6 +8,27 @@ using UnityEngine.UI;
 public class ZoneOnEnter : MonoBehaviour
 {
     public Enemy1 enemy1;
+    public GameObject enemy1_anim;
+    public GameObject enemy2_anim;
+    public GameObject enemy3_anim;
+    public GameObject enemy4_anim;
+    public GameObject enemy5_anim;
+    public GameObject enemy6_anim;
+    public GameObject enemy7_anim;
+    public GameObject enemy8_anim;
+    public GameObject enemy9_anim;
+    public GameObject enemy10_anim;
+    public GameObject enemy11_anim;
+    public GameObject enemy12_anim;
+    public GameObject enemy13_anim;
+    public GameObject enemy14_anim;
+    public GameObject enemy15_anim;
+    public GameObject alien_anim;
+
+
+
+
+
     public Enemy2 enemy2;
     public Enemy3 enemy3;
     public Enemy4 enemy4;
@@ -33,7 +54,7 @@ public class ZoneOnEnter : MonoBehaviour
     {
         if (other.tag == "Enemy_1")
         {
-            enemy1.GetComponent<Animator>().enabled = false;
+            enemy1_anim.GetComponent<Animator>().enabled = false;
             enemy1.actions.SetBool("IdleWhenArrives", true);
             enemy1.counterToShotBool = true;
             
@@ -41,7 +62,7 @@ public class ZoneOnEnter : MonoBehaviour
 
         if (other.tag == "Enemy_2")
         {
-            enemy2.GetComponent<Animator>().enabled = false;
+            enemy2_anim.GetComponent<Animator>().enabled = false;
             enemy2.actions.SetBool("IdleWhenArrives", true);
             enemy2.counterToShotBool = true;
 
@@ -49,7 +70,7 @@ public class ZoneOnEnter : MonoBehaviour
 
         if (other.tag == "Enemy_3")
         {
-            enemy3.GetComponent<Animator>().enabled = false;
+            enemy3_anim.GetComponent<Animator>().enabled = false;
             enemy3.actions.SetBool("IdleWhenArrives", true);
             enemy3.counterToShotBool = true;
 
@@ -57,23 +78,21 @@ public class ZoneOnEnter : MonoBehaviour
 
         if (other.tag == "Enemy_4")
         {
-            enemy4.GetComponent<Animator>().enabled = false;
+            enemy4_anim.GetComponent<Animator>().enabled = false;
             enemy4.actions.SetBool("IdleWhenArrives", true);
             enemy4.counterToShotBool = true;
-
         }
 
         if (other.tag == "Enemy_5")
         {
-            enemy5.GetComponent<Animator>().enabled = false;
+            enemy5_anim.GetComponent<Animator>().enabled = false;
             enemy5.actions.SetBool("IdleWhenArrives", true);
             enemy5.counterToShotBool = true;
-
         }
 
         if (other.tag == "Enemy_6")
         {
-            enemy6.GetComponent<Animator>().enabled = false;
+            enemy6_anim.GetComponent<Animator>().enabled = false;
             enemy6.actions.SetBool("IdleWhenArrives", true);
             enemy6.counterToShotBool = true;
 
@@ -81,7 +100,7 @@ public class ZoneOnEnter : MonoBehaviour
 
         if (other.tag == "Enemy_7")
         {
-            enemy7.GetComponent<Animator>().enabled = false;
+            enemy7_anim.GetComponent<Animator>().enabled = false;
             enemy7.actions.SetBool("IdleWhenArrives", true);
             enemy7.counterToShotBool = true;
 
@@ -89,63 +108,63 @@ public class ZoneOnEnter : MonoBehaviour
 
         if (other.tag == "Enemy_8")
         {
-            enemy8.GetComponent<Animator>().enabled = false;
+            enemy8_anim.GetComponent<Animator>().enabled = false;
             enemy8.actions.SetBool("IdleWhenArrives", true);
             enemy8.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_9")
         {
-            enemy9.GetComponent<Animator>().enabled = false;
+            enemy9_anim.GetComponent<Animator>().enabled = false;
             enemy9.actions.SetBool("IdleWhenArrives", true);
             enemy9.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_10")
         {
-            enemy10.GetComponent<Animator>().enabled = false;
+            enemy10_anim.GetComponent<Animator>().enabled = false;
             enemy10.actions.SetBool("IdleWhenArrives", true);
             enemy10.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_11")
         {
-            enemy11.GetComponent<Animator>().enabled = false;
+            enemy11_anim.GetComponent<Animator>().enabled = false;
             enemy11.actions.SetBool("IdleWhenArrives", true);
             enemy11.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_12")
         {
-            enemy12.GetComponent<Animator>().enabled = false;
+            enemy12_anim.GetComponent<Animator>().enabled = false;
             enemy12.actions.SetBool("IdleWhenArrives", true);
             enemy12.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_13")
         {
-            enemy13.GetComponent<Animator>().enabled = false;
+            enemy13_anim.GetComponent<Animator>().enabled = false;
             enemy13.actions.SetBool("IdleWhenArrives", true);
             enemy13.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_14")
         {
-            enemy14.GetComponent<Animator>().enabled = false;
+            enemy14_anim.GetComponent<Animator>().enabled = false;
             enemy14.actions.SetBool("IdleWhenArrives", true);
             enemy14.counterToShotBool = true;
 
         }
         if (other.tag == "Enemy_15")
         {
-            enemy15.GetComponent<Animator>().enabled = false;
+            enemy15_anim.GetComponent<Animator>().enabled = false;
             enemy15.actions.SetBool("IdleWhenArrives", true);
             enemy15.counterToShotBool = true;
 
         }
         if (other.tag == "ALIEN_ALIEN")
         {
-            alien.GetComponent<Animator>().enabled = false;
+            alien_anim.GetComponent<Animator>().enabled = false;
             //alien.actions.SetBool("IdleWhenArrives", true);
             //alien.counterToShotBool = true;
 
