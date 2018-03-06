@@ -9,6 +9,7 @@ public class DeadManager : MonoBehaviour {
     public EnemyManagement enemies;
     public bool dead = false;
     public GameObject explosion_player;
+    public GameObject[] particles;
     // Use this for initialization
     void Start ()
     {
@@ -21,10 +22,16 @@ public class DeadManager : MonoBehaviour {
 		if(dead)
         {
             explosion_player.SetActive(true);
+
             Debug.Log("DEAD!");
             enemies.GetComponent<EnemyManagement>().enabled = false;
             system.timeofGame = 0;
             player.SetActive(false);
+            for(int i = 0; i < 20; i++)
+            {
+                particles[i].SetActive(false);
+
+            }
             //disable the monkey after an explosion of something like that
         }
 	}

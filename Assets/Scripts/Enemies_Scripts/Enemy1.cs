@@ -53,13 +53,14 @@ public class Enemy1 : MonoBehaviour {
         if(timeOfShot)
         {
             timeOfDie++;
-            if(timeOfDie > 20)
+
+            if (timeOfDie > 18)
             {
                 DieManager.dead = true;
             }
-            if (timeOfDie > 17)
+            if (timeOfDie > 16)
             {
-                //  particlesShot.SetActive(true);
+                particlesShot.SetActive(true);
             }
         }
 
@@ -67,9 +68,10 @@ public class Enemy1 : MonoBehaviour {
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
-            //explosion.transform.localPosition = alien1_mesh.gameObject.transform.localPosition;
             alien1_mesh.SetActive(false);
-        }  
+            particlesShot.SetActive(false);
+
+        }
     }
 
     void OnTriggerEnter(Collider other)
