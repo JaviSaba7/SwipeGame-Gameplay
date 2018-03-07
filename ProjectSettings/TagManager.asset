@@ -27,6 +27,7 @@ TagManager:
   - ALIEN
   - KillBomb
   - ALIEN_ALIEN
+  - Alien_tag
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ public class Enemy1 : MonoBehaviour {
     public GameObject explosion;
     public DeadManager DieManager;
     public GameObject particlesShot;
+    
     // Use this for initialization
     void Start ()
     {
@@ -58,7 +59,7 @@ public class Enemy1 : MonoBehaviour {
             {
                 DieManager.dead = true;
             }
-            if (timeOfDie > 16)
+            if (timeOfDie > 16 && DieManager.dieEnemy == false)
             {
                 particlesShot.SetActive(true);
             }

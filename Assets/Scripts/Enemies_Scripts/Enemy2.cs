@@ -18,6 +18,9 @@ public class Enemy2 : MonoBehaviour
     public Animator actions;
     public bool deadEnemy = false;
     public GameObject explosion;
+    public GameObject particlesShot;
+
+
     // Use this for initialization
     void Start()
     {
@@ -54,16 +57,22 @@ public class Enemy2 : MonoBehaviour
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
-            explosion.transform.position = alien2_mesh.transform.position;
             alien2_mesh.SetActive(false);
+            //particlesShot.SetActive(false);
+
         }
 
         if (timeOfShot)
         {
             timeOfDie++;
-            if (timeOfDie > 20)
+
+            if (timeOfDie > 18)
             {
                 DieManager.dead = true;
+            }
+            if (timeOfDie > 16 && DieManager.dieEnemy == false)
+            {
+                particlesShot.SetActive(true);
             }
         }
     }

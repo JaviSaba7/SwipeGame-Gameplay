@@ -7,7 +7,7 @@ public class Enemy7 : MonoBehaviour
     public GameObject anim_alien1;
     public bool timeOfShot;
     public DeadManager DieManager;
-
+    public GameObject particlesShot;
     public float timeOfDie;
     public GameObject alien7_mesh;
     public bool startEnemy;
@@ -50,21 +50,28 @@ public class Enemy7 : MonoBehaviour
             if (counterToShot > 12) actions.SetBool("Reload", false);
         }
 
+       
+
+
+        if (timeOfShot)
+        {
+            timeOfDie++;
+
+            if (timeOfDie > 18)
+            {
+                DieManager.dead = true;
+            }
+            if (timeOfDie > 16 && DieManager.dieEnemy == false)
+            {
+                particlesShot.SetActive(true);
+            }
+        }
         if (deadEnemy)
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
             explosion.transform.position = alien7_mesh.transform.position;
             alien7_mesh.SetActive(false);
-        }
-
-        if (timeOfShot)
-        {
-            timeOfDie++;
-            if (timeOfDie > 20)
-            {
-                DieManager.dead = true;
-            }
         }
     }
     void OnTriggerEnter(Collider other)

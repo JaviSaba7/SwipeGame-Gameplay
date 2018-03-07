@@ -7,7 +7,7 @@ public class Enemy14 : MonoBehaviour
     public GameObject anim_alien1;
     public bool timeOfShot;
     public DeadManager DieManager;
-
+    public GameObject particlesShot;
     public float timeOfDie;
     public GameObject alien14_mesh;
     public bool startEnemy;
@@ -57,12 +57,18 @@ public class Enemy14 : MonoBehaviour
             alien14_mesh.SetActive(false);
         }
 
+
         if (timeOfShot)
         {
             timeOfDie++;
-            if (timeOfDie > 20)
+
+            if (timeOfDie > 18)
             {
                 DieManager.dead = true;
+            }
+            if (timeOfDie > 16 && DieManager.dieEnemy == false)
+            {
+                particlesShot.SetActive(true);
             }
         }
 

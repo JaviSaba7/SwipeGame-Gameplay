@@ -7,7 +7,7 @@ public class Enemy13 : MonoBehaviour
     public GameObject anim_alien1;
     public bool timeOfShot;
     public DeadManager DieManager;
-
+    public GameObject particlesShot;
     public float timeOfDie;
     public GameObject alien13_mesh;
     public bool startEnemy;
@@ -30,7 +30,7 @@ public class Enemy13 : MonoBehaviour
         if (startEnemy == true)
         {
             counterToRun++;
-            if (counterToRun >= 20 && counterToRun <= 23)
+            if (counterToRun >= 40 && counterToRun <= 43)
             {
                 actions.SetBool("Run", true);
                 anim_alien1.GetComponent<Animator>().enabled = true;
@@ -57,12 +57,18 @@ public class Enemy13 : MonoBehaviour
             alien13_mesh.SetActive(false);
         }
 
+
         if (timeOfShot)
         {
             timeOfDie++;
-            if (timeOfDie > 20)
+
+            if (timeOfDie > 18)
             {
                 DieManager.dead = true;
+            }
+            if (timeOfDie > 16 && DieManager.dieEnemy == false)
+            {
+                particlesShot.SetActive(true);
             }
         }
     }

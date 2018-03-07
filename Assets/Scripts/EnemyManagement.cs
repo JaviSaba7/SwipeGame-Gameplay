@@ -102,7 +102,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //10 Enemy
-        if (gameSystem.timeofGame <= 30 && (enemy10.deadEnemy == false))
+        if (gameSystem.timeofGame <= 25 && (enemy10.deadEnemy == false))
         {
             enemy10.startEnemy = true;
             enemy10.alien10_mesh.SetActive(true);
@@ -115,7 +115,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //11 Enemy
-        if (gameSystem.timeofGame <= 25 && (enemy11.deadEnemy == false))
+        if (gameSystem.timeofGame <= 20 && (enemy11.deadEnemy == false))
         {
             enemy11.startEnemy = true;
             enemy11.alien11_mesh.SetActive(true);
@@ -127,7 +127,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //12 Enemy
-        if (gameSystem.timeofGame <= 25 && (enemy12.deadEnemy == false))
+        if (gameSystem.timeofGame <= 20 && (enemy12.deadEnemy == false))
         {
             enemy12.startEnemy = true;
             enemy12.alien12_mesh.SetActive(true);

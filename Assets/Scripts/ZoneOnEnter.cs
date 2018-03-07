@@ -162,8 +162,9 @@ public class ZoneOnEnter : MonoBehaviour
             enemy15.counterToShotBool = true;
 
         }
-        if (other.tag == "ALIEN_ALIEN")
+        if (other.tag == "Alien_tag")
         {
+            Debug.Log("ALIEN STOP!");
             alien_anim.GetComponent<Animator>().enabled = false;
             //alien.actions.SetBool("IdleWhenArrives", true);
             //alien.counterToShotBool = true;
