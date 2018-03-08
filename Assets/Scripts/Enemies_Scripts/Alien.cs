@@ -13,7 +13,7 @@ public class Alien : MonoBehaviour
     public Animator anim_total;
     public Animator anim_nave;
     public Animator anim_alien;
-
+    public GameObject shot_alien;
 
     public bool deadEnemy = false;
     public GameObject explosion;
@@ -28,30 +28,24 @@ public class Alien : MonoBehaviour
     {
         if (startEnemy == true)
         {
-            counterToRun++;
-            if (counterToRun >= 20 && counterToRun <= 23)
-            {
-                alien.GetComponent<Animator>().enabled = true;
-
-            }
-        }
-
-        if (counterToShotBool)
-        {
             counterToShot++;
-            if (counterToShot > 5)
+            if (counterToShot > 100)
             {
                 anim_nave.SetTrigger("Shot");
                 anim_alien.SetTrigger("Shot");
+                shot_alien.SetActive(true);
+
             }
+         
         }
+
+      
 
         if (deadEnemy)
         {
             Debug.Log("HELLO");
             anim_nave.SetTrigger("Die");
             explosion.SetActive(true);
-            explosion.transform.position = alien.transform.position;
             //alien.SetActive(false);
         }
     }
