@@ -41,13 +41,14 @@ public class Enemy15 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 10 && counterToShot < 12)
+            if (counterToShot > 10 && counterToShot < 16)
             {
                 actions.SetBool("Reload", true);
                 timeOfShot = true;
 
             }
-            if (counterToShot > 12) actions.SetBool("Reload", false);
+            if (counterToShot > 16) actions.SetBool("Reload", false);
+
         }
         if (deadEnemy)
         {

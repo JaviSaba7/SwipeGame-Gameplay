@@ -42,13 +42,28 @@ public class Enemy3 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 10 && counterToShot < 12)
+            if (counterToShot > 10 && counterToShot < 16)
             {
                 actions.SetBool("Reload", true);
                 timeOfShot = true;
 
             }
-            if (counterToShot > 12) actions.SetBool("Reload", false);
+            if (counterToShot > 16) actions.SetBool("Reload", false);
+
+        }
+
+        if (timeOfShot)
+        {
+            timeOfDie++;
+
+            if (timeOfDie > 52)
+            {
+                DieManager.dead = true;
+            }
+            if (timeOfDie > 47 && DieManager.dieEnemy == false)
+            {
+                particlesShot.SetActive(true);
+            }
         }
         if (deadEnemy)
         {
@@ -60,19 +75,6 @@ public class Enemy3 : MonoBehaviour
         }
 
 
-        if (timeOfShot)
-        {
-            timeOfDie++;
-
-            if (timeOfDie > 18)
-            {
-                DieManager.dead = true;
-            }
-            if (timeOfDie > 16 && DieManager.dieEnemy == false)
-            {
-                particlesShot.SetActive(true);
-            }
-        }
     }
 
 

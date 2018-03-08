@@ -27,7 +27,7 @@ public class GameSystem : MonoBehaviour {
     {
 
         if (turnOff) counter++;
-        if (counter > 60)
+        if (counter > 15)
         {
             Debug.Log("TIME PASADO");
             counter = 0;

@@ -165,8 +165,7 @@ public class EnemyManagement : MonoBehaviour {
         if (gameSystem.timeofGame <= 15 && (enemy15.deadEnemy == false))
         {
             enemy15.startEnemy = true;
-            enemy15.alien15_mesh.SetActive(true);
-
+            enemy15.alien15_mesh.SetActive(true);  
         }
         else
         {
@@ -174,11 +173,10 @@ public class EnemyManagement : MonoBehaviour {
         }
         
         //ALIEN
-        if (gameSystem.timeofGame <= 10)
+        if ((gameSystem.timeofGame <= 10) && (alien.deadEnemy == false))
         {
             alien.startEnemy = true;
             alien.alien.SetActive(true);
-
         }
         else
         {

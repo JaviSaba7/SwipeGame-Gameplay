@@ -54,6 +54,7 @@ public class ZoneOnEnter : MonoBehaviour
     {
         if (other.tag == "Enemy_1")
         {
+            Debug.Log("ENTER!");
             enemy1_anim.GetComponent<Animator>().enabled = false;
             enemy1.actions.SetBool("IdleWhenArrives", true);
             enemy1.counterToShotBool = true;
@@ -162,7 +163,7 @@ public class ZoneOnEnter : MonoBehaviour
             enemy15.counterToShotBool = true;
 
         }
-        if (other.tag == "Alien_tag")
+        if (other.tag == "Enemy_16")
         {
             Debug.Log("ALIEN STOP!");
             alien_anim.GetComponent<Animator>().enabled = false;

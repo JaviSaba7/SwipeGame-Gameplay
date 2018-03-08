@@ -41,15 +41,16 @@ public class Enemy10 : MonoBehaviour
         if (counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 10 && counterToShot < 12)
+            if (counterToShot > 10 && counterToShot < 16)
             {
                 actions.SetBool("Reload", true);
                 timeOfShot = true;
 
             }
-            if (counterToShot > 12) actions.SetBool("Reload", false);
+            if (counterToShot > 16) actions.SetBool("Reload", false);
+
         }
-        if(deadEnemy)
+        if (deadEnemy)
         {
             Debug.Log("HELLO");
             explosion.SetActive(true);
@@ -62,11 +63,11 @@ public class Enemy10 : MonoBehaviour
         {
             timeOfDie++;
 
-            if (timeOfDie > 18)
+            if (timeOfDie > 52)
             {
                 DieManager.dead = true;
             }
-            if (timeOfDie > 16 && DieManager.dieEnemy == false)
+            if (timeOfDie > 47 && DieManager.dieEnemy == false)
             {
                 particlesShot.SetActive(true);
             }
