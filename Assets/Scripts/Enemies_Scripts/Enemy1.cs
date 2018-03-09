@@ -31,7 +31,7 @@ public class Enemy1 : MonoBehaviour {
 		if(startEnemy == true)
         {
             counterToRun++;
-            if(counterToRun >= 50 && counterToRun <= 53)
+            if(counterToRun >= 80 && counterToRun <= 85)
             {
                 actions.SetBool("Run", true);
                 anim_alien1.GetComponent<Animator>().enabled = true;               
@@ -41,13 +41,13 @@ public class Enemy1 : MonoBehaviour {
         if(counterToShotBool)
         {
             counterToShot++;
-            if (counterToShot > 10 && counterToShot < 16)
+            if (counterToShot > 20)
             {
                 actions.SetBool("Reload", true);
                 timeOfShot = true;
 
             }
-            if (counterToShot > 16) actions.SetBool("Reload", false);
+            if (counterToShot > 25) actions.SetBool("Reload", false);
 
         }
 
@@ -55,11 +55,12 @@ public class Enemy1 : MonoBehaviour {
         {
             timeOfDie++;
 
-            if (timeOfDie > 52)
+            if (timeOfDie > 55)
             {
                 DieManager.dead = true;
+
             }
-            if (timeOfDie > 47 && DieManager.dieEnemy == false)
+            if (timeOfDie > 50 && DieManager.dieEnemy == false)
             {
                 particlesShot.SetActive(true);
             }
