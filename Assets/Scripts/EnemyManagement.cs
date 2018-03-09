@@ -30,6 +30,7 @@ public class EnemyManagement : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        //Nomber and times of the enemies will be different probably because of tests
         //FirstEnemy
         if (gameSystem.timeofGame <= 59 && enemy1.deadEnemy == false)
         {
@@ -115,7 +116,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //11 Enemy
-        if (gameSystem.timeofGame <= 20 && (enemy11.deadEnemy == false))
+        if (gameSystem.timeofGame <= 15 && (enemy11.deadEnemy == false))
         {
             enemy11.startEnemy = true;
             enemy11.alien11_mesh.SetActive(true);
@@ -127,7 +128,7 @@ public class EnemyManagement : MonoBehaviour {
         }
 
         //12 Enemy
-        if (gameSystem.timeofGame <= 20 && (enemy12.deadEnemy == false))
+        if (gameSystem.timeofGame <= 15 && (enemy12.deadEnemy == false))
         {
             enemy12.startEnemy = true;
             enemy12.alien12_mesh.SetActive(true);
@@ -137,7 +138,7 @@ public class EnemyManagement : MonoBehaviour {
         {
             enemy12.startEnemy = false;
         }
-
+        /* 
         //13 Enemy
         if (gameSystem.timeofGame <= 15 && (enemy13.deadEnemy == false))
         {
@@ -160,6 +161,7 @@ public class EnemyManagement : MonoBehaviour {
         {
             enemy14.startEnemy = false;
         }
+        
 
         //15 Enemy
         if (gameSystem.timeofGame <= 15 && (enemy15.deadEnemy == false))
@@ -171,7 +173,8 @@ public class EnemyManagement : MonoBehaviour {
         {
             enemy15.startEnemy = false;
         }
-        
+        */
+
         //ALIEN
         if ((gameSystem.timeofGame <= 10) && (alien.deadEnemy == false))
         {

@@ -37,6 +37,7 @@ public class Enemy7 : MonoBehaviour
 
             }
         }
+
         if (counterToShotBool)
         {
             counterToShot++;

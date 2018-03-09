@@ -42,12 +42,13 @@ public class DeadManager : MonoBehaviour {
 		if(dead)
         {
             Debug.Log("Dead!");
-           /*explosion_player.SetActive(true);
-
+           explosion_player.SetActive(true);
+/*
             enemies.GetComponent<EnemyManagement>().enabled = false;
             system.timeofGame = 0;
             player.SetActive(false);*/
             //dieEnemy = true;
+
             //DISABLING PARTICLES
             if(dieEnemy)
             {

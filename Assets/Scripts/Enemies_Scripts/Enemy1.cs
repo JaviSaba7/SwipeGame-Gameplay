@@ -55,7 +55,7 @@ public class Enemy1 : MonoBehaviour {
         {
             timeOfDie++;
 
-            if (timeOfDie > 55)
+            if (timeOfDie > 60)
             {
                 DieManager.dead = true;
 
