@@ -262,6 +262,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   ballThrown: 0
   winText: {fileID: 0}
+  bomb: {fileID: 1968657714333714}
 --- !u!135 &135739019896626564
 SphereCollider:
   m_ObjectHideFlags: 1

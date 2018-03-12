@@ -86,7 +86,4 @@ public class Enemy9 : MonoBehaviour
             deadEnemy = true;
         }
     }
-
-
-
 }

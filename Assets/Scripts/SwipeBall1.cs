@@ -81,6 +81,8 @@ public class SwipeBall1 : MonoBehaviour
     public GameObject anim;
     public bool ballThrown = false;
     public GameObject winText;
+
+    public GameObject bomb;
     //Start
     void Start()
     {
@@ -149,8 +151,7 @@ public class SwipeBall1 : MonoBehaviour
         RaycastHit hit;
         if (ball.Raycast(ray, out hit, 100.0F))
         {
-             // transform.position = ray.GetPoint(100.0F);
-          //  Debug.Log("Ball Touching");
+           
             timeForDoSwipe++;
             canSwipe = true;
             if (timeForDoSwipe > maxTimeForDoSwipe)
@@ -177,6 +178,7 @@ public class SwipeBall1 : MonoBehaviour
 
         CalculateWaypoints();
         DoTween();
+        bomb.GetComponent<SwipeBall1>().enabled = false;
     }
 
     public void MakeBallReal()
