@@ -14,7 +14,6 @@ public class CollisionBall : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.name == "Ball")
-        Debug.Log("COLLISION!!!!!");
         particles.SetActive(true);
     }
 }

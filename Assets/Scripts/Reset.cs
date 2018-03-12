@@ -18,8 +18,7 @@ public class Reset : MonoBehaviour
         Debug.Log("ResetScene");
 
         Application.LoadLevel(Application.loadedLevelName);
-        //SceneManager.UnloadScene(WallyGame);
-        //SceneManager.LoadScene("WallYGame", LoadSceneMode.Single);
+
 
     }
 }

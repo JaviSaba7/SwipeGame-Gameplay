@@ -22,7 +22,7 @@ public class RestartBall : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        initialPosition = new Vector3(0, 0.12f, -1.3f);
+        initialPosition = new Vector3(0, 0.54f, -1.3f);
 
         tmp = Instantiate(prefab, initialPosition, quat).gameObject;
 

@@ -33,7 +33,7 @@ public class Enemy2 : MonoBehaviour
         if (startEnemy == true)
         {
             counterToRun++;
-            if (counterToRun >= 50 && counterToRun <= 53)
+            if (counterToRun >= 150 && counterToRun <= 180)
             {
                 actions.SetBool("Run", true);
                 anim_alien1.GetComponent<Animator>().enabled = true;
@@ -50,7 +50,7 @@ public class Enemy2 : MonoBehaviour
                 timeOfShot = true;
 
             }
-            if (counterToShot > 25) actions.SetBool("Reload", false);
+            if (counterToShot > 100) actions.SetBool("Reload", false);
 
         }
 
@@ -58,24 +58,23 @@ public class Enemy2 : MonoBehaviour
         {
             timeOfDie++;
 
-            if (timeOfDie > 60)
+            if (timeOfDie > 220)
             {
                 DieManager.dead = true;
-                particlesShot.SetActive(false);
 
             }
-            if (timeOfDie > 47 && timeOfDie < 60 && DieManager.dieEnemy == false)
+            if (timeOfDie > 200 && DieManager.dieEnemy == false)
             {
                 particlesShot.SetActive(true);
             }
         }
-
         if (deadEnemy)
         {
-            Debug.Log("HELLO");
+            anim_alien1.GetComponent<Animator>().enabled = false;
+
             explosion.SetActive(true);
             alien2_mesh.SetActive(false);
-             //particlesShot.SetActive(false);
+            particlesShot.SetActive(false);
 
         }
 

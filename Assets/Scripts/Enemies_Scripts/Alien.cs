@@ -14,7 +14,7 @@ public class Alien : MonoBehaviour
     public Animator anim_nave;
     public Animator anim_alien;
     public GameObject shot_alien;
-
+    public DeadManager DieManager;
     public bool deadEnemy = false;
     public GameObject explosion;
     // Use this for initialization
@@ -29,12 +29,15 @@ public class Alien : MonoBehaviour
         if (startEnemy == true)
         {
             counterToShot++;
-            if (counterToShot > 100)
+            if (counterToShot > 200)
             {
                 anim_nave.SetTrigger("Shot");
                 anim_alien.SetTrigger("Shot");
                 shot_alien.SetActive(true);
-
+                if (counterToShot > 230 )
+                {
+                    DieManager.dead = true;
+                }
             }
          
         }
@@ -43,10 +46,11 @@ public class Alien : MonoBehaviour
 
         if (deadEnemy)
         {
-            Debug.Log("HELLO");
             anim_nave.SetTrigger("Die");
             explosion.SetActive(true);
-            //alien.SetActive(false);
+            alien.SetActive(false);
+            shot_alien.SetActive(false);
+
         }
     }
 

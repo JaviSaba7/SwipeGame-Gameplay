@@ -39,7 +39,9 @@ public class WinSystem : MonoBehaviour {
             swipeSystem.timeGame = 0;
             swipeSystem.activeTime = false;
         }
+
         if (swipeSystem.timeGame == 0) Debug.Log("YOU WIN!");
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             swipeSystem.timeGame = 0;

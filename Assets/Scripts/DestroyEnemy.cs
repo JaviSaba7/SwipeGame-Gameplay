@@ -17,7 +17,6 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (other.tag == "KillBomb")
         {
-            Debug.Log("HELLO");
             particles.SetActive(true);
             alien.SetActive(false);
         }
