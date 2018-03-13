@@ -330,6 +330,7 @@
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy7.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy8.cs" />
     <Compile Include="Assets\Scripts\Enemies_Scripts\Enemy9.cs" />
+    <Compile Include="Assets\Scripts\Enemies_Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\EnemyManagement.cs" />
     <Compile Include="Assets\Scripts\GameSystem.cs" />
