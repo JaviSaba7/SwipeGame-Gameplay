@@ -6,6 +6,7 @@ public class Explosion : MonoBehaviour {
 
     public GameObject ball;
     public GameObject particles_explosion;
+    public GameObject mecha;
     // Use this for initialization
     void Start () {
 		
@@ -20,11 +21,18 @@ public class Explosion : MonoBehaviour {
     {
         if (other.tag == "ground")
         {
-            Debug.Log("explosion");
             ball.GetComponent<SphereCollider>().radius = 2;
 
+            Debug.Log("explosion");
+
             particles_explosion.SetActive(true);
+
             ball.GetComponent<MeshRenderer>().enabled = false;
+            //add a delay to destroy de collider???
+            ball.GetComponent<SphereCollider>().enabled = false;
+
+            mecha.SetActive(false);
+
         }
     }
 }
