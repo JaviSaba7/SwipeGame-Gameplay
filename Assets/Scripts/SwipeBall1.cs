@@ -90,6 +90,7 @@ public class SwipeBall1 : MonoBehaviour
         journeyLength = Vector3.Distance(rb.position, detection.point);
         canSwipe = false;
         timeGame = 60.0f;
+
     }
 
     //Update
@@ -120,11 +121,6 @@ public class SwipeBall1 : MonoBehaviour
                 timeForRestart = 0;
             }
         }
-        //PRUEBA PARA MOVIL
-
-
-       
-
     }
             //Functions
     void playerLogic()
@@ -259,7 +255,9 @@ public class SwipeBall1 : MonoBehaviour
        posX = (PosMaxX.x + PosMaxY.x)/ 2;
         posY = ((PosMaxX.y + PosMaxY.y)/2);
 
-        saveTime = ((saveTime2 - saveTime) /2) + saveTime;
+        //saveTime = ((saveTime2 - saveTime) /2) + saveTime;
+        saveTime = 1;
+
         posZ = (saveTime / timer) * (zf - zo) + zo;
 
         posZ = (saveTime / timer) * (zf - zo) + zo;
@@ -268,7 +266,7 @@ public class SwipeBall1 : MonoBehaviour
         
         waypointsArray = new Vector3[2];
         waypointsArray[0] = iPosition;
-        //waypointsArray[1] = midPosition;
+        waypointsArray[1] = midPosition;
         waypointsArray[1] = fPosition;
     }
     private void Kick(Vector3 lastPosition)
@@ -290,17 +288,17 @@ public class SwipeBall1 : MonoBehaviour
     void CheckXPoint()
     {
         var difToCenter = Input.mousePosition.x / Screen.width -0.5f;
-         /*if (Mathf.Abs(difToCenter) > Mathf.Abs(PosMaxX.x))
+        if (Mathf.Abs(difToCenter) > Mathf.Abs(PosMaxX.x))
         {
             PosMaxX.x = difToCenter;
             PosMaxX.y = Input.mousePosition.y/ Screen.height;
             saveTime = timer;
-        }*/
+        }
       
        if (Mathf.Abs(Input.mousePosition.y / Screen.height) > Mathf.Abs(PosMaxY.y))
         {
             PosMaxY.y = Input.mousePosition.y / Screen.height;
-            //PosMaxY.x = difToCenter;
+            PosMaxY.x = difToCenter;
             saveTime2 = timer;
         }
     }

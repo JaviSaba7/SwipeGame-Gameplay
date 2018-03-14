@@ -18,7 +18,7 @@ public class RestartBall : MonoBehaviour {
     public float timeOfDisappear = 50.0f;
     public bool activeDisappear = false;
     public GameObject tmp;
-    public Quaternion quat = new Quaternion(-20.0f, 80.0f, 90.0f, 0);
+    public Quaternion quat = new Quaternion(-20.0f, 200.0f, 90.0f, 0);
     // Use this for initialization
     void Start()
     {
@@ -50,7 +50,6 @@ public class RestartBall : MonoBehaviour {
                 }
             }
         }
-
     }
 
     private void CreateBall()
