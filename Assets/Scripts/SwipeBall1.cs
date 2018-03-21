@@ -90,7 +90,7 @@ public class SwipeBall1 : MonoBehaviour
         journeyLength = Vector3.Distance(rb.position, detection.point);
         canSwipe = false;
         timeGame = 60.0f;
-
+        anim = GameObject.Find("Mono_Animations");
     }
 
     //Update
@@ -252,11 +252,11 @@ public class SwipeBall1 : MonoBehaviour
 
     public void CalculateWaypoints()
     {
-       posX = (PosMaxX.x + PosMaxY.x)/ 2;
+        posX = (PosMaxX.x + PosMaxY.x)/ 2;
         posY = ((PosMaxX.y + PosMaxY.y)/2);
 
         //saveTime = ((saveTime2 - saveTime) /2) + saveTime;
-        saveTime = 1;
+        saveTime = 50;
 
         posZ = (saveTime / timer) * (zf - zo) + zo;
 
@@ -269,9 +269,10 @@ public class SwipeBall1 : MonoBehaviour
         waypointsArray[1] = midPosition;
         waypointsArray[1] = fPosition;
     }
+
     private void Kick(Vector3 lastPosition)
     {    
-        //anim.monkey.GetComponent<Animator>().SetTrigger("isChuting");
+        anim.GetComponent<Animator>().SetTrigger("isChuting");
         
         ballThrown = true;
         appearBall2Bool = true;

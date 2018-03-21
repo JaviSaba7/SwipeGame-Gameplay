@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Alien : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Alien : MonoBehaviour
     public DeadManager DieManager;
     public bool deadEnemy = false;
     public GameObject explosion;
+    public TextMeshProUGUI youWin;
     // Use this for initialization
     void Start()
     {
@@ -50,6 +52,7 @@ public class Alien : MonoBehaviour
             explosion.SetActive(true);
             alien.SetActive(false);
             shot_alien.SetActive(false);
+            youWin.enabled = true;
 
         }
     }

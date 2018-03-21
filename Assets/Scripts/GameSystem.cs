@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameSystem : MonoBehaviour {
   
@@ -16,6 +17,8 @@ public class GameSystem : MonoBehaviour {
     public EnemyManagement enemies;
     public float counter;
     public bool turnOff = false;
+    public GameObject dead;
+
     // Use this for initialization
     void Start ()
     {
@@ -57,8 +60,9 @@ public class GameSystem : MonoBehaviour {
 
         if (timeofGame < 0.0f)
         {
+            Debug.Log("YOU ARE DEATH");
+            dead.GetComponent<TextMeshProUGUI>().enabled = true;
             timeofGame = 0.0f;
-            Debug.Log("Game ended");
             reset.SetActive(true);
             //characters.SetActive(false);
 

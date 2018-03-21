@@ -27,7 +27,7 @@ public class DeadManager : MonoBehaviour {
     {
         if (dead)
         {
-            Debug.Log("Dead!");
+
             explosion_player.SetActive(true);
            
             enemies.GetComponent<EnemyManagement>().enabled = false;
@@ -36,12 +36,7 @@ public class DeadManager : MonoBehaviour {
             dieEnemy = true;
 
             //DISABLING PARTICLES
-            if (dieEnemy)
-            {
-
-                deadText.enabled = true;
-            }
-
+            if (dieEnemy) deadText.enabled = true;
 
             restart.enabled = true;
             particles.SetActive(false);

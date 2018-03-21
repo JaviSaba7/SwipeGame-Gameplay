@@ -7,6 +7,8 @@ public class Explosion : MonoBehaviour {
     public GameObject ball;
     public GameObject particles_explosion;
     public GameObject mecha;
+    public float counter = 0;
+    public bool counterActive = false;
     // Use this for initialization
     void Start () {
 		
@@ -14,14 +16,22 @@ public class Explosion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		 if(counterActive) counter++;
 	}
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "ground")
         {
-            ball.GetComponent<SphereCollider>().radius = 2;
+            counterActive = true;
+            if (counter >= 1000)
+            {
+                ball.GetComponent<SphereCollider>().enabled = false;
+                Debug.Log("DELETE");
+
+            }
+
+            ball.GetComponent<SphereCollider>().radius = 5;
 
             Debug.Log("explosion");
 
@@ -29,7 +39,6 @@ public class Explosion : MonoBehaviour {
 
             ball.GetComponent<MeshRenderer>().enabled = false;
             //add a delay to destroy de collider???
-            ball.GetComponent<SphereCollider>().enabled = false;
 
             mecha.SetActive(false);
 
